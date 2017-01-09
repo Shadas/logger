@@ -22,7 +22,12 @@ It's a tool for free log by golang.
 4. Add the function InitLogger to finish the configure of logger.
 
    ```
-   logger.InitLogger(loggerConfig)
+   err := logger.InitLogger(loggerConfig)
+   if err != nil {
+      log.Println(err.Error())
+   }
+
+   ...(business code)
    ```
 
 5. Then you can use it by 
@@ -30,7 +35,7 @@ It's a tool for free log by golang.
 	```
     logger.Log(logger.DEBUG, "debug thing1")
 
-	logger.Log(logger.DEBUG, "debug thing2")
+	  logger.Log(logger.DEBUG, "debug thing2")
 
     logger.Log(logger.ERROR, "error thing1")
 

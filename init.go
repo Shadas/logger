@@ -1,12 +1,19 @@
 package logger
 
 import (
+	"errors"
 	"log"
 	"os"
+	"strings"
 	"time"
 )
 
-func InitLogger(config LoggerConfig) {
+func InitLogger(config LoggerConfig) error {
+
+	if strings.TrimSpace(config.LogPath) == "" {
+		return errors.New("The log path can not be empty.")
+	}
+
 	loggerConfig = &config
 
 	debugWriteModel = &WriteModel{}
@@ -53,6 +60,8 @@ func InitLogger(config LoggerConfig) {
 			}
 		}
 	}
+
+	return nil
 
 }
 
