@@ -7,7 +7,9 @@ It's a tool for free log by golang.
 
 1. Run the order 
 
-    ```go get "github.com/Shadas/logger"```
+    ```
+    go get "github.com/Shadas/logger"
+    ```
 
 2. Create a config object for drive the logger
 
@@ -19,17 +21,21 @@ It's a tool for free log by golang.
 
 4. Add the function InitLogger to finish the configure of logger.
 
-   ```logger.InitLogger(loggerConfig)```
+   ```
+   logger.InitLogger(loggerConfig)
+   ```
 
 5. Then you can use it by 
 
-   ```logger.Log(logger.DEBUG, "debug thing1")```
+	```
+    logger.Log(logger.DEBUG, "debug thing1")
 
-   ```logger.Log(logger.DEBUG, "debug thing2")```
+	logger.Log(logger.DEBUG, "debug thing2")
 
-   ```logger.Log(logger.ERROR, "error thing1")```
+    logger.Log(logger.ERROR, "error thing1")
 
-   ```logger.Log(logger.INFO, "info thing1")```
+    logger.Log(logger.INFO, "info thing1")
+    ```
 
 6. Do not forget to close the logger in the end.
 
