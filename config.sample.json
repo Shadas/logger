@@ -1,0 +1,9 @@
+{
+        "log_path":"/var/logs",
+        "log_level":"DEBUG",
+        "log_range":[
+                "DEBUG",
+				"INFO"
+        ],
+        "log_buffer" : 10
+}
