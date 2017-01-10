@@ -60,3 +60,9 @@ It's a tool for free log by golang.
 2. **Asynchronous write.** The messages will be put in a channel first, one other thread will get it from the channel and write to the file. 
 
 3. **Full write.** If there are still some messages in the channel while the main thread is over, the CloseLogger function will ensure the messages can be written to the file before the program exit.
+
+4. **Separate file.** Configure the config object, set SeparateFileByDate as true, the files will be separated by date like '2017-1-7_DEBUG.log, 2017-1-8_DEBUG.log' etc.
+
+
+
+
