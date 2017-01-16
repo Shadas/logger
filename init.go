@@ -81,7 +81,7 @@ func InitLogger(config LoggerConfig) error {
 func CloseLogger() {
 	if debugWriteModel != nil && debugWriteModel.file != nil {
 		for {
-			time.Sleep(1 * time.Microsecond)
+			time.Sleep(1 * time.Nanosecond)
 			if len(debugWriteModel.exit_buffer) == 0 {
 				break
 			}
@@ -90,7 +90,7 @@ func CloseLogger() {
 	}
 	if infoWriteModel != nil && infoWriteModel.file != nil {
 		for {
-			time.Sleep(1 * time.Microsecond)
+			time.Sleep(1 * time.Nanosecond)
 			if len(debugWriteModel.exit_buffer) == 0 {
 				break
 			}
@@ -99,7 +99,7 @@ func CloseLogger() {
 	}
 	if warningWriteModel != nil && warningWriteModel.file != nil {
 		for {
-			time.Sleep(1 * time.Microsecond)
+			time.Sleep(1 * time.Nanosecond)
 			if len(debugWriteModel.exit_buffer) == 0 {
 				break
 			}
@@ -108,7 +108,7 @@ func CloseLogger() {
 	}
 	if errorWriteModel != nil && errorWriteModel.file != nil {
 		for {
-			time.Sleep(1 * time.Microsecond)
+			time.Sleep(1 * time.Nanosecond)
 			if len(debugWriteModel.exit_buffer) == 0 {
 				break
 			}
@@ -117,7 +117,7 @@ func CloseLogger() {
 	}
 	if fatalWriteModel != nil && fatalWriteModel.file != nil {
 		for {
-			time.Sleep(1 * time.Microsecond)
+			time.Sleep(1 * time.Nanosecond)
 			if len(debugWriteModel.exit_buffer) == 0 {
 				break
 			}

@@ -23,8 +23,12 @@ type WriteModel struct {
 	exit_buffer chan bool
 }
 
-func (w *WriteModel) write(info interface{}) {
-	msg := fmt.Sprintf("%v", info)
+func (w *WriteModel) write(infos ...interface{}) {
+	var msg string
+	for _, info := range infos {
+		msg += fmt.Sprintf("%v", info)
+	}
+
 	w.exit_buffer <- true
 	w.log_buffer <- msg
 }

@@ -1,5 +1,5 @@
 {
-        "log_path":"/var/logs",
+        "log_path":"/var/logger",
         "log_level":"DEBUG",
         "log_range":[
                 "DEBUG",
